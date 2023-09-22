@@ -1,6 +1,0 @@
-[ DbTools.so ]
-# List of selected classes
-class UniGenerateClasses
-class UniParser
-header UniGenerateClasses.h
-header UniParser.h

@@ -1,6 +1,0 @@
-[ BmnSteering.so ]
-# List of selected classes
-class BmnOfflineQaSteering
-class BmnSteering
-header BmnOfflineQaSteering.h
-header BmnSteering.h

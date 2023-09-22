@@ -1,5 +1,0 @@
-#ifndef BMNROOT_VERSION
-#define BMNROOT_VERSION "21.08.0-467-g49c32f56"
-#define BMNROOT_GIT_DATE "Wed Sep 28 15:38:30 2022 +0300"
-#endif
-

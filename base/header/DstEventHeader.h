@@ -31,6 +31,14 @@ class DstEventHeader : public FairEventHeader {
     vector <Double_t>  fPq, fPq_MDF, fPq_MDF1, fPq_MDF2, fPq_MDF3, fTx_MDF;
     Short_t fZinBC12, fZoutBC34_12, fZoutBC35_12, fZoutBC45_12, fZoutBC34_S, fZoutBC35_S, fZoutBC45_S, fVeto, fDCH_Mult, fMWPC_Mult;
     
+    // Info from Scint. Wall
+    vector <Double_t> fScWallELoss; 
+    vector <UInt_t> fScWallCellId; 
+    vector <UInt_t> fScWallFlag;
+    vector <Int_t> fScWallTrackId;
+    UInt_t fScWallMult;
+    UInt_t fScWallNMatchTracks;
+    vector <UInt_t> fScWallOrderId;
     
     
 
@@ -96,6 +104,15 @@ Double_t f;
     Short_t GetDCH_Mult() { return fDCH_Mult; }
     Short_t GetMWPC_Mult() { return fMWPC_Mult; }
     
+    // Info from Scint. Wall
+    vector <Double_t> GetScWallELoss() { return fScWallELoss; }
+    vector <UInt_t> GetScWallCellId() { return fScWallCellId; }
+    vector <UInt_t> GetScWallFlag() { return fScWallFlag; }
+    vector <Int_t> GetScWallTrackId() { return fScWallTrackId; }
+    UInt_t GetScWallMult() { return fScWallMult; }
+    UInt_t GetScWallNMatchTracks() { return fScWallNMatchTracks; }
+    vector <UInt_t> GetScWallOrderId() { return fScWallOrderId; }
+    
   
     //Short_t GetZin() { return fZin; }
     /** Set Event Header branch name */
@@ -148,6 +165,15 @@ Double_t f;
     void SetVeto(Short_t Veto) { fVeto = Veto; }
     void SetDCH_Mult(Short_t DCH_Mult) { fDCH_Mult = DCH_Mult; }
     void SetMWPC_Mult(Short_t MWPC_Mult) { fMWPC_Mult = MWPC_Mult; }
+    
+    // Info from Scint. Wall
+    void SetScWallELoss(vector <Double_t> ScWallELoss) { fScWallELoss = ScWallELoss; }
+    void SetScWallCellId(vector <UInt_t> ScWallCellId) { fScWallCellId = ScWallCellId; }
+    void SetScWallFlag(vector <UInt_t> ScWallFlag) { fScWallFlag = ScWallFlag; }
+    void SetScWallTrackId(vector <Int_t> ScWallTrackId) { fScWallTrackId = ScWallTrackId; }
+    void SetScWallMult(UInt_t ScWallMult) { fScWallMult = ScWallMult; }
+    void SetScWallNMatchTracks(UInt_t ScWallNMatchTracks) { fScWallNMatchTracks = ScWallNMatchTracks; }
+    void SetScWallOrderId(vector <UInt_t> ScWallOrderId) { fScWallOrderId = ScWallOrderId; }
   
     void CopyFrom(DstEventHeader * hdr);
     ClassDef(DstEventHeader, 2)

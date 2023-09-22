@@ -1,4 +1,0 @@
-[ EventDb.so ]
-# List of selected classes
-class EventCatalogue
-header EventCatalogue.h

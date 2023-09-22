@@ -36,7 +36,14 @@ DstEventHeader::DstEventHeader() : FairEventHeader(),
                                    fB10(0,0),
                                    fB11(0,0),
                                    fDCH_Mult(-1),
-                                   fMWPC_Mult(-1) {}
+                                   fMWPC_Mult(-1),
+                                   fScWallELoss(0,0),
+                                   fScWallCellId(0,0),
+                                   fScWallFlag(0,0),
+                                   fScWallTrackId(0,0),
+                                   fScWallMult(0),
+                                   fScWallNMatchTracks(0),
+                                   fScWallOrderId(0,0) {}
 
 // -----   Constructor with parameters   -----------------------------------
 DstEventHeader::DstEventHeader(UInt_t run_id, UInt_t event_id, TTimeStamp event_time, BmnTriggerType trigger_type, Double_t b) : FairEventHeader(),
@@ -74,7 +81,14 @@ DstEventHeader::DstEventHeader(UInt_t run_id, UInt_t event_id, TTimeStamp event_
                                                                                                                                  fB10(0,0),
                                                                                                                                  fB11(0,0),
                                                                                                                                  fDCH_Mult(-1),
-                                                                                                                                 fMWPC_Mult(-1) {                                                                                                          
+                                                                                                                                 fMWPC_Mult(-1),
+                                                                                                                                 fScWallELoss(0,0),
+                                                                                                                                 fScWallCellId(0,0),
+                                                                                                                                 fScWallFlag(0,0),
+                                                                                                                                 fScWallTrackId(0,0),
+                                                                                                                                 fScWallMult(0),
+                                                                                                                                 fScWallNMatchTracks(0),
+                                                                                                                                 fScWallOrderId(0,0) {                                                                                                          
     SetRunId(run_id);
     SetEventTime(event_time.AsDouble());
 }
@@ -118,6 +132,13 @@ void DstEventHeader::CopyFrom(DstEventHeader * hdr) {
     fB11 = hdr->fB11;
     fDCH_Mult = hdr->fDCH_Mult;
     fMWPC_Mult = hdr->fMWPC_Mult;
+    fScWallELoss = hdr->fScWallELoss;
+    fScWallCellId = hdr->fScWallCellId;
+    fScWallFlag = hdr->fScWallFlag;
+    fScWallTrackId = hdr->fScWallTrackId;
+    fScWallMult = hdr->fScWallMult;
+    fScWallNMatchTracks = hdr->fScWallNMatchTracks;
+    fScWallOrderId = hdr->fScWallOrderId;
     
 }
 

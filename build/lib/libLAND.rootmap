@@ -1,8 +1,0 @@
-[ LAND.so ]
-# List of selected classes
-class BmnLANDDigit
-class BmnLANDHit
-class BmnLANDHitProducer
-header BmnLANDDigit.h
-header BmnLANDHit.h
-header BmnLANDHitProducer.h

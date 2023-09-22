@@ -1,8 +1,0 @@
-[ TangoData.so ]
-# List of selected classes
-class TangoConnection
-class TangoData
-class TangoTimeInterval
-class TangoTimeParameter
-header TangoConnection.h
-header TangoData.h

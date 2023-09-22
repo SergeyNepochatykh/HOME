@@ -1,4 +1,0 @@
-[ BmnRecoTof2.so ]
-# List of selected classes
-class BmnTofHitProducer
-header BmnTofHitProducer.h
