@@ -7,6 +7,7 @@ set(INCLUDE_DIRECTORIES
  ${CMAKE_SOURCE_DIR}/base/header
  ${CMAKE_SOURCE_DIR}/reconstruction/scwall
  ${CMAKE_SOURCE_DIR}/detectors/scwall
+ ${CMAKE_SOURCE_DIR}/detectors/dch
  ${CMAKE_SOURCE_DIR}/decoder
 )
 
